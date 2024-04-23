@@ -9,6 +9,9 @@
   background-position: left center;
   height: 490px;
   position: relative;
+  @media (max-width: 1199px) {
+    background-image: url('/Small-banner.gif');
+  }
   &::after {
     content: '';
     position: absolute;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Secular+One&family=Share+Tech+Mono&family=Syne+Mono&family=Teko:wght@300&display=swap');
+
 :root {
   --primary: #3a3a3a;
   --secondary: #111213;
@@ -189,6 +191,10 @@ h6 {
     padding-left: 50px;
     padding-right: 50px;
   }
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   //height: 3rem;
 }
 
