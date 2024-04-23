@@ -180,13 +180,16 @@ h6 {
   min-height: calc(100vh - 50px);
 }
 .header {
+  background-color: rgb(0, 0, 0);
   padding: 2.5rem;
-  border-bottom: 1px solid #ebebeb;
+  //border-bottom: 1px solid #000000;
   margin-bottom: 3rem;
+  color: white;
   @media only screen and (min-width: 1200px) {
     padding-left: 50px;
     padding-right: 50px;
   }
+  //height: 3rem;
 }
 
 .container {

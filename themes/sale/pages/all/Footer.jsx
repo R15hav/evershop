@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './tailwind.scss';
 
-function Footer({ themeConfig: { copyRight } }) {
+function Footer({ themeConfig: { copyRight }, menu: { items } }) {
   return (
     <div className="bg-black mx-3">
-      <div class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3">
+      <div class="grid grid-cols-1 gap-8 sm:gap-2 sm:grid-cols-4">
         <div class="mt-2">
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contacts</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -32,24 +32,40 @@ function Footer({ themeConfig: { copyRight } }) {
             </ul>
         </div>
         <div class="mt-2">
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Menu Items</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            {items.map((i, index) => (
+                <li class="mb-1" key={index}>
+                    <a href={i.url} class="hover:underline text-white">{i.name}</a>
+                </li>
+            ))}
+            </ul>
+        </div>
+        <div class="mt-2">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Useful Links</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-1">
-                    <a href="#" class="hover:underline text-white">Flowbite</a>
+                    <a href="/page/contact-us" class="hover:underline text-white">Contact US</a>
                 </li>
-                <li>
-                    <a href="#" class="hover:underline text-white">Tailwind CSS</a>
+                <li class="mb-1">
+                    <a href="/page/about-us" class="hover:underline text-white">About US</a>
+                </li>
+                <li class="mb-1">
+                    <a href="/page/privacy-policy" class="hover:underline text-white">Privacy policy</a>
                 </li>
             </ul>
         </div>
         <div class="mt-2">
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow Us</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-1">
-                    <a href="#" class="hover:underline text-white">Flowbite</a>
+                    <a href="#" class="hover:underline text-white">Youtube</a>
                 </li>
-                <li>
-                    <a href="#" class="hover:underline text-white">Tailwind CSS</a>
+                <li class="mb-1">
+                    <a href="#" class="hover:underline text-white">Instagram</a>
+                </li>
+                <li class="mb-1">
+                    <a href="#" class="hover:underline text-white">Facebook</a>
                 </li>
             </ul>
         </div>
@@ -117,6 +133,12 @@ export const query = `
   query query {
     themeConfig {
       copyRight
+    }
+    menu {
+      items {
+        name
+        url
+      }
     }
   }
 `;

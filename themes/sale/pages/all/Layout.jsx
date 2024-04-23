@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <>
       <LoadingBar />
-      <div className="header flex justify-between">
+      <div className="sticky top-0 z-50 header flex justify-between bg-white">
         <Area
           id="header"
           noOuter
@@ -17,14 +17,14 @@ export default function Layout() {
               component: { default: Area },
               props: {
                 id: 'icon-wrapper',
-                className: 'icon-wrapper flex justify-between space-x-1'
+                className: 'icon-wrapper flex justify-between space-x-1 '
               },
               sortOrder: 20
             }
           ]}
         />
       </div>
-      <main className="content">
+      <main className="content" >
         <Area id="content" className="" noOuter />
       </main>
       <div className="footer bg-black">
