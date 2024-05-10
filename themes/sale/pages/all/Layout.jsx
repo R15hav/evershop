@@ -27,6 +27,7 @@ export default function Layout() {
       <main className="content" >
         <Area id="content" className="" noOuter />
       </main>
+      <a className="sticky z-50 whatsapp-button"  target="_blank" rel="noopener noreferrer" href="https://wa.me/919229770159?text=hi"><img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/></a>
       <div className="footer bg-black">
         <Area id="footer" noOuter coreComponents={[]} />
       </div>
